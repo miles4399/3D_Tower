@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private Camera _mainCamera;
     private CharacterMovement _characterMovement;
+    private PlaceObject _placeObject;
 
     private Vector2 _moveInput;
     private bool _possessed = false;
@@ -22,6 +23,14 @@ public class PlayerController : MonoBehaviour
     {
         _mainCamera = Camera.main;
         if (_autoPossess && _target != null) Possess(_target);
+        if(_target.TryGetComponent(out PlaceObject placeObject))
+        {
+            _placeObject = placeObject;
+        }
+        else
+        {
+            Debug.LogWarning($"{gameObject.name} Get component failed");
+        }
     }
 
     public void Possess(GameObject target)
@@ -48,7 +57,12 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputValue value)
     {
         _moveInput = value.Get<Vector2>();
-        Debug.Log($"Move input: {_moveInput}");
+        //Debug.Log($"Move input: {_moveInput}");
+    }
+
+    public void OnPlace(InputValue value)
+    {
+        _placeObject?.Place();
     }
 
     // Update is called once per frame
