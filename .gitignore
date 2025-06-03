@@ -47,6 +47,10 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.png
+*.tif
+Assets/ALP_Assets/**/TerrainDATA/
+
 
 # Unity3D generated meta files
 *.pidb.meta
