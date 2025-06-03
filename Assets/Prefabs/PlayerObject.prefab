@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 452252639388041170}
   - component: {fileID: 452252639388041169}
   - component: {fileID: 452252639388041168}
+  - component: {fileID: 1118033535}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -278,6 +279,19 @@ MonoBehaviour:
   _orientation: {fileID: 452252639388041175}
   _raycastTransform: {fileID: 452252640781551798}
   RawMoveInput: {x: 0, y: 0}
+--- !u!114 &1118033535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452252639388041174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08270b0a2e4093049b90869f0bff1211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _placeable: {fileID: 20849624573228747, guid: de3212fcd412c534c86f40d66de7e45c, type: 3}
 --- !u!1 &452252639477715393
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,19 +490,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 452252639388041174}
   _autoPossess: 1
---- !u!114 &452252640234018486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758804519732276691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a3c4222533d33949a14fda5cdd1b371, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _dampTime: 0.1
 --- !u!1 &452252640781551797
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +520,19 @@ Transform:
   m_Father: {fileID: 452252639388041175}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &452252640234018486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758804519732276691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3c4222533d33949a14fda5cdd1b371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dampTime: 0.1
 --- !u!1001 &452252640346591362
 PrefabInstance:
   m_ObjectHideFlags: 0

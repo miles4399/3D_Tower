@@ -325,24 +325,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1118033530 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 452252639388041174, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
-  m_PrefabInstance: {fileID: 452252640434661804}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1118033535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1118033530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08270b0a2e4093049b90869f0bff1211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _placeable: {fileID: 20849624573228747, guid: de3212fcd412c534c86f40d66de7e45c, type: 3}
 --- !u!1 &2054570860
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +352,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054570860}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -493,10 +475,6 @@ PrefabInstance:
     - target: {fileID: 452252638890069170, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
       propertyPath: m_Name
       value: PlayerObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 452252639477715422, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
-      propertyPath: m_ChildCameras.Array.size
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
