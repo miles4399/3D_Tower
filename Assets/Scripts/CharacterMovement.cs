@@ -80,7 +80,7 @@ public class CharacterMovement : MonoBehaviour
     {
         float lineLength = 10f;
         Gizmos.color = Color.red;
-        Vector3 start = _orientation.position;
+        Vector3 start = _raycastTransform.position;
         Vector3 end = start + transform.forward * lineLength;
         
         Gizmos.DrawLine(start, end);

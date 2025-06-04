@@ -28,6 +28,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "OpenCraft",
+                    "type": "Button",
+                    "id": "7b3dd798-47fd-4f5e-bb3b-b2b4c7c8c217",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)"
                 }
             ],
             "bindings": [
@@ -204,6 +212,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Place",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ffeed537-a08d-4a6d-93ae-edf946eaba59",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "OpenCraft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -60,10 +60,10 @@ public class PlayerController : MonoBehaviour
         //Debug.Log($"Move input: {_moveInput}");
     }
 
-    public void OnPlace(InputValue value)
+/*    public void OnPlace(InputValue value)
     {
         _placeObject?.Place();
-    }
+    }*/
 
     // Update is called once per frame
     void Update()

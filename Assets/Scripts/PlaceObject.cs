@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlaceObject : MonoBehaviour
 {
-    [SerializeField] private GameObject _placeable;
-
+    private GameObject _placeable;
     private Camera _camera;
     private Vector3 _cursorPos;
     // Start is called before the first frame update
@@ -14,10 +13,10 @@ public class PlaceObject : MonoBehaviour
         _camera = Camera.main;
     }
 
-    public void Place()
+    public void Place(GameObject prefab)
     {
         //Debug.Log("Placing block");
-        GameObject placeable = Instantiate(_placeable, _cursorPos.Flatten(), Quaternion.identity);
+        _placeable = Instantiate(prefab, _cursorPos.Flatten(), Quaternion.identity);
     }
 
     // Update is called once per frame
