@@ -15,17 +15,28 @@ public class InputActionListener : MonoBehaviour
 
     private void OnEnable()
     {
-        _action.action.performed += Performed;
+        if(_action != null)
+        {
+            _action.action.performed += Performed;
+        }
     }
 
     private void OnDisable()
     {
-        _action.action.performed -= Performed;
+        if(_action != null)
+        {
+            _action.action.performed -= Performed;
+        }
     }
 
     private void Performed(InputAction.CallbackContext ctx)
     {
-        OnPerformed.Invoke();
+        OnPerformed?.Invoke();
+        TriggerButton();
+    }
+
+    public void TriggerButton()
+    {
         _activateButton?.onClick.Invoke();
     }
 }

@@ -366,8 +366,9 @@ GameObject:
   - component: {fileID: 823445067}
   - component: {fileID: 823445066}
   - component: {fileID: 823445065}
+  - component: {fileID: 823445068}
   m_Layer: 5
-  m_Name: items
+  m_Name: Button-item1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,11 +440,23 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1118033535}
         m_TargetAssemblyTypeName: PlaceObject, Assembly-CSharp
-        m_MethodName: Place
+        m_MethodName: SelectPlaceable
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 20849624573228747, guid: de3212fcd412c534c86f40d66de7e45c, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 823445068}
+        m_TargetAssemblyTypeName: InputActionListener, Assembly-CSharp
+        m_MethodName: TriggerButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -487,6 +500,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823445063}
   m_CullTransparentMesh: 1
+--- !u!114 &823445068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823445063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24640d40dce89e64ca31f2da308ae936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _action: {fileID: 0}
+  _activateButton: {fileID: 1093469466}
+  OnPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &974475188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,8 +1117,8 @@ GameObject:
   - component: {fileID: 2054570863}
   - component: {fileID: 2054570862}
   - component: {fileID: 2054570861}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 6
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1183,8 +1213,9 @@ GameObject:
   - component: {fileID: 2119870304}
   - component: {fileID: 2119870303}
   - component: {fileID: 2119870302}
+  - component: {fileID: 2119870305}
   m_Layer: 5
-  m_Name: items (1)
+  m_Name: Button-item2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1256,11 +1287,23 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1118033535}
         m_TargetAssemblyTypeName: PlaceObject, Assembly-CSharp
-        m_MethodName: Place
+        m_MethodName: SelectPlaceable
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 5653526798265510258, guid: 58740851349e5d24cbeb286f07764e7e, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2119870305}
+        m_TargetAssemblyTypeName: InputActionListener, Assembly-CSharp
+        m_MethodName: TriggerButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1304,6 +1347,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119870300}
   m_CullTransparentMesh: 1
+--- !u!114 &2119870305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119870300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24640d40dce89e64ca31f2da308ae936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _action: {fileID: 0}
+  _activateButton: {fileID: 1093469466}
+  OnPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &452252640434661804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1311,10 +1371,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1118033535, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
-      propertyPath: _placeable
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 452252638890069134, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1365,30 +1421,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 452252639477715422, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
       propertyPath: m_ChildCameras.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452252640781551798, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452252640781551798, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 452252640781551798, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452252640781551798, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452252640781551798, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452252640781551798, guid: 28774263dd2f6644ba5ad2605826ef1d, type: 3}
-      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
